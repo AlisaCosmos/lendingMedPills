@@ -1,0 +1,60 @@
+@import '../../style/vars';
+.pillsAdvantage {
+  margin-top: 50px;
+  &__items {
+    color: $titleColor;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+  }
+  &__item {
+    padding-left: 94px;
+    padding-bottom: 41px;
+    position: relative;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__item::before {
+    content: url(../../assets/img/arrow.svg);
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  &__item__list {
+    display: flex;
+  }
+  &__item__listItem {
+    padding-left: 94px;
+    padding-top: 16px;
+    color: #1a4a59;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    position: relative;
+  }
+  &__item__listItem::before {
+    position: absolute;
+    top: 22px;
+    left: 70px;
+    content: '';
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    background: #27b688;
+  }
+}
+@media (max-width: $mobile) {
+  .pillsAdvantage {
+    margin-top: 16px;
+    &__items {
+      font-size: 12px;
+      line-height: 14.4px;
+    }
+  }
+}
